@@ -29,61 +29,87 @@
   }
   ul,ol{list-style: none;}
   address{font-style: normal;}
-  h1,h2,h3,h4,p,ul {
+  h1,h2,h3,h4,h5,h6,p,ul {
   margin: 0px;
   padding: 0px;}
-  
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+  img {
+    display: block;
+    max-width: 100%;
+  }
+  *,
+  *::before,
+  *::after {
+  box-sizing: inherit;
+}
   
    /* Шапка */
+
   .header,
   .header-list,.header-list-contacts{
     display: flex;
   }
-  .header{background-color: var(--header-color);
-    width: 1600px;
-    height: 80px;
+  .container{
+    width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+  .header-container{
+    display: flex;
+    align-items: center;
+  }
+  .header{padding-top: 25px;
+    padding-bottom: 25px;
     border-bottom:  1px solid #ECECEC;
-    
-    background: #FFFFFF;}
+   }
+  .header-nav{
+    display: flex;
+    align-items: center;
+  }
     .header-list{
       font-family: inherit;
       font-weight: 500;
       font-size: 14px;
       line-height: 1.14;
       letter-spacing: 0.02em;
-      margin: 32px 0px 0px 93px;
-      width: 294px;
-      height: 16px;
-      justify-content: space-between;
-    
-      
       color: var(--primary-color);
-     
-
     }
   .web{color: var(--interactive-color);
-    width: 145px;
-    height: 31px;
-    left: 215px;
-    top: 24px;}
+    }
+  .header-li:not(:last-child){
+    margin-right: 50px;
+  }
     
-  .header-link{font-family: var(--secondary-font);
-   
+  .header-link{
+    
+    font-family: var(--secondary-font);
+    margin-right: 93px;
+    align-self: center;
+    text-decoration: none;
+
+    font-family: Raleway;
+    font-style: normal;
     font-weight: bold;
     font-size: 26px;
     line-height: 1.19;
-    margin: 24px 0px 0px 215px;
-    
-    letter-spacing: 0.03em;
     
     color: var(--primary-color)
     
     }
     .header-list-contacts{
-      width: 307px;
-      height: 16px;
-      margin: 32px 0px 0px 331px;
-      justify-content: space-between;
+     margin-left: auto;
     }
      
     .link{font-family:var(--primary-font);
@@ -108,8 +134,14 @@
         color: var(--interactive-color);
       
       cursor: pointer;}
-  
-    .contacts{font-family: var(--primary-font);
+
+      .contacts-item:not(:last-child) {
+        margin-right: 50px;
+      }
+    .contacts{
+    
+      
+      font-family: var(--primary-font);
      
       font-weight: 500;
       font-size: 14px;
@@ -122,78 +154,60 @@
   /* Предложение */
   .order-background {
     background-color: var(--background-color);
-    width: 1600px;
-    height: 600px;
-    border: 1px solid #ECECEC;
-   
-    
-  }
-  .order-container {
-   text-align: center;
-   width: 696px;
-   height: 200px;
-   margin: 200px 0px 0px 452px;
-   
+    padding: 200px 0; 
   }
   .order-background-title {
+    width: 696px;
+    margin: 0 auto;
+    margin-bottom: 30px;
     font-weight: 900;
     font-size: 44px;
     line-height: 1.5;
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-   
-    
     color: var(--header-color);
-    
-   
   }
   .button {
-    font-family: inherit;
-    border-radius: 4px;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto; 
+  }
+  button.button {
+    padding: 10px 32px;
+    color:var(--header-color) ;
     background-color: var(--interactive-color);
-    color: var(--header-color);
-    font-weight: 700;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+  
+    font-family: var(--primary-font);
+    font-style: normal;
+    font-weight: bold;
     font-size: 16px;
     line-height: 1.87;
+    display: flex;
     align-items: center;
     text-align: center;
     letter-spacing: 0.06em;
-    cursor: pointer;
-    width: 200px;
-    height: 50px;
   }
   
   /* Приоритеты */
+  .priorities{padding-top: 94px;}
   .list{display: flex;}
-  .priorities-our{font-family:inherit;
+  .priorities-item:not(:last-child){
+    margin-right: 30px;
     
-    font-weight: bold;
-    font-size: 36px;
-    line-height: 1.16;
-    text-align: center;
-    letter-spacing: 0.03em;
-    width: 240px;
-    height: 42px;
-    margin: 26px 0px 0px 680px;
-    
-    color: var(--primary-color);
-    }
-    .list{
-      width: 1170px;
-      height: 101px;
-      margin: 26px 0px 0px 215px;
-      justify-content: space-between;
-      
-    }
+  }
+  .priorities-item{
+    width: 270px;
+  }
+  
   .priorities-title {
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    width: 270px;
-    height: 16px;
     
   }
   .priorities-description {
@@ -202,27 +216,24 @@
     letter-spacing: 0.03em;
     color: var(--secondary-color);
     text-transform: none;
-    width: 270px;
-    height: 75px;
-    margin-top: 10px;
+    
+    
   }
   
   /*Специализация*/
-  .activity{
-    width: 1170px;
-    height: 386px;
-    margin: 94px 0px 0px 215px;
+  .activity{ padding-top: 94px;
+    padding-bottom: 94px;
+    
   }
   .activity-title{
     font-family:var(--primary-font);
-   
     font-weight: bold;
     font-size: 36px;
     line-height: 1.16;
     text-align: center;
     letter-spacing: 0.03em;
-   
-    
+    margin-bottom: 50px;
+    text-align: center;
     color:var(--primary-color);
   }
   .activity-list{
@@ -230,135 +241,96 @@
     justify-content: space-between;
     margin-top: 50px;
   }
+  .activity-item:not(:last-child){
+    margin-right: 30px;
+  }
   /* Команда */
   
  .staff{background-color: var(--rear-background);
-  width: 1600px;
-  height: 648px;
-  left: 0px;
-  top: 1449px;
-  margin-top: 94px;
-  }
-
- .staff-our{
-   font-family: var(--primary-font);
- 
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
-  letter-spacing: 0.03em;
   padding-top: 94px;
-  
- 
-  
-  color: var(--primary-color);
+  padding-bottom: 94px;
   }
-  .staff-list{display: flex;
-    width: 1170px;
-    height: 368px;
-    margin-top: 50px;
-    margin-left: 215px;
-    justify-content: space-between;
+  .staff-list{
+    display: flex;
   }
-  .staff-name{font-family: var(--primary-font);
-    
+  .staff-box{
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .staff-name{
+    margin-bottom: 10px;
+    font-family: var(--primary-font);
     font-weight: 500;
     font-size: 16px;
     line-height: 1.18;
-    
-    
     text-align: center;
     letter-spacing: 0.03em;
-    padding-top: 30px;
     color: var(--primary-color);
-    
     }
-    .staff-position{font-family:var(--primary-font);
-     
+    .staff-position{
+      font-family:var(--primary-font);
       font-weight: normal;
       font-size: 16px;
       line-height: 1.18;
-     
-      
       text-align: center;
       letter-spacing: 0.03em;
-      padding-top: 10px;
-      
       color:var(--secondary-color) ;
       }
-      .staff-list.li{color: var(--header-color);}
+      .staff-block-foto:not(:last-child){
+        margin-right: 30px;
+      }
       .staff-block-foto{
+        background-color: var(--header-color);
         box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
         border-radius: 0px 0px 4px 4px;
       }
     /* Контакты */
-    .footer{background-color: var(--background-color);
-    width: 1600px;
-    height: 262px;}
-    .footer-box{
-      padding: 60px 0px 0px 215px;
-    
-
+    .footer{
+      background-color: var(--background-color);
+      padding-top: 60px;
+      padding-bottom: 60px;
     }
-    .footer-link{font-family: var(--secondary-font);
-      
+    .footer-link{
+      display: block;
+      margin-bottom: 20px;
+      font-family: var(--secondary-font);
       font-weight: bold;
       font-size: 26px;
       line-height: 1.19;
-    
-      
       letter-spacing: 0.03em;
-      width: 145px;
-      height: 31px;
-      
-      
-      color: var(--interactive-color);}
+      color: var(--interactive-color);
+      text-decoration: none;}
     .studio{color: var(--header-color);}
+   
     .address{
-      width: 231px;
-      height: 81px;
-      padding-top: 20px;
-    }
-    .our-address{font-family: var(--primary-font);
+      margin-bottom: 9px;
+      color:var(--header-color);
+      font-family:var(--primary-font);
       font-style: normal;
       font-weight: normal;
       font-size: 14px;
-      line-height: 1.71;
-      letter-spacing: 0.03em;
-
-      
-      color: var(--header-color);
+      line-height: 1.74;
+      letter-spacing: 0.03em;}
+      .footer-contacts-item:not(:last-child){
+        margin-bottom: 9px;
       }
-      .footer-contacts{font-family: var(--primary-font);
-       
+      .footer-contacts{
+        font-family: var(--primary-font);
         font-weight: normal;
         font-size: 14px;
         line-height: 1.71;
-        
-        
         letter-spacing: 0.03em;
-        
-        
         color: rgba(255, 255, 255, 0.6);
         }
-        .footer-mail{
-          padding-top: 9px;
-        }
-        .footer-tel{
-          padding-top: 9px;
-        }
+
         .footer-list .footer-contacts:hover,
         .footer-list .footer-contacts:focus {
        color: var(--interactive-color);
         }
   /* Портфолио */
-  .portfolio-list{display: flex;
-   width: 611px;
-   height: 38px;
-   margin:  94px 0px 0px 495px;
-  justify-content: space-between;}
+  .portfolio-list{
+   }
   
   .portfolio-button{
     font-family: inherit;
@@ -383,10 +355,7 @@
     cursor: pointer;}
    
     .portfolio-details-list{
-      width: 1170px;
-      height: 1272px;
-     
-      margin:   50px 0px 94px 215px;
+      
       display: flex;
       flex-wrap:wrap;
       flex-direction: row;
@@ -397,8 +366,7 @@
       
     }
     .portfolio-block{
-      width: 371px;
-      height: 404px;
+      
       background: #FFFFFF;
       border: 1px solid #EEEEEE;
       box-sizing: border-box;
