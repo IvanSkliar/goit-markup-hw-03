@@ -329,71 +329,86 @@
        color: var(--interactive-color);
         }
   /* Портфолио */
-  .portfolio-list{
+  .portfolio-sektion{padding-top: 94px;
+    padding-bottom: 94px;
+    
+    align-items: center;
+
+   }
+   .portfolio-list{
+     display: flex;
+     justify-content: center;
+   }
+   .portfolio-item:not(:last-child){
+     margin-right: 8px;
    }
   
   .portfolio-button{
     font-family: inherit;
-   
     font-weight: 500;
     font-size: 16px;
     line-height: 1.62;
-   
-    
     text-align: center;
     letter-spacing: 0.03em;
     border: none;
     padding: 6px 22px;
     border-radius: 4px;
-    
-    
     color: var(--primary-color);}
     .portfolio-button:focus,
     .portfolio-button:hover {
     color: #ffffff;
     background-color: var(--interactive-color);
     cursor: pointer;}
+    /* Портфолио навигация */
+    .portfolio-sektion{
+      align-items: center;
+
+    }
    
     .portfolio-details-list{
-      
       display: flex;
       flex-wrap:wrap;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items:flex-end;
-      align-content: space-between;
-     
       
+      
+     
+      padding-top: 50px;
     }
     .portfolio-block{
-      
+      margin-right: 30px;
+      margin-bottom: 30px;
+    }
+    .portfolio-block:nth-child(3n){
+      margin-right: 0;
+    }
+    .portfolio-block:nth-last-child(-n+3){
+      margin-bottom: 0;
+    }
+    .portfolio-block{
       background: #FFFFFF;
       border: 1px solid #EEEEEE;
       box-sizing: border-box;
-
      }
-     
-    .portfolio-heading{font-family: var(--primary-font);
-    
+    .portfolio-heading{
+      font-family: var(--primary-font);
       font-weight: bold;
       font-size: 18px;
       line-height: 2;
-      
-      
       letter-spacing: 0.06em;
-      
       color:var(--primary-color);
       }
-     
-    .portfolio-description{font-family: var(--primary-font);
-     
+    .portfolio-description{
+      font-family: var(--primary-font);
       font-weight: normal;
       font-size: 16px;
       line-height: 30px;
-      
-      
       letter-spacing: 0.03em;
-      
       color: var(--secondary-color);
-      
+      }
+      .portfolio-details-item:not(:last-child){
+        margin-bottom: 4px;
+      }
+      .portfolio-details-item{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 24px;
       }
