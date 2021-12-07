@@ -22,7 +22,6 @@
     font-style: normal;
     font-weight: 400;
     color: var(--primary-color);
-    width: 1600px;
   }
   a {
     text-decoration: none;
@@ -49,15 +48,7 @@
     display: block;
     max-width: 100%;
   }
-  *,
-  *::before,
-  *::after {
-  box-sizing: inherit;
-}
-  
    /* Шапка */
-
-  .header,
   .header-list,.header-list-contacts{
     display: flex;
   }
@@ -238,7 +229,7 @@
   }
   .activity-list{
     display: flex;
-    justify-content: space-between;
+   
     margin-top: 50px;
   }
   .activity-item:not(:last-child){
@@ -338,6 +329,7 @@
    .portfolio-list{
      display: flex;
      justify-content: center;
+     margin-bottom: 50px;
    }
    .portfolio-item:not(:last-child){
      margin-right: 8px;
@@ -368,10 +360,6 @@
     .portfolio-details-list{
       display: flex;
       flex-wrap:wrap;
-      
-      
-     
-      padding-top: 50px;
     }
     .portfolio-block{
       margin-right: 30px;
@@ -385,8 +373,7 @@
     }
     .portfolio-block{
       background: #FFFFFF;
-      border: 1px solid #EEEEEE;
-      box-sizing: border-box;
+      
      }
     .portfolio-heading{
       font-family: var(--primary-font);
@@ -408,7 +395,8 @@
         margin-bottom: 4px;
       }
       .portfolio-details-item{
-        padding-top: 20px;
-        padding-bottom: 20px;
-        padding-left: 24px;
+       padding: 20px 24px;
+       border-right: 1px solid #EEEEEE;
+       border-bottom: 1px solid #EEEEEE;
+       border-left: 1px solid #EEEEEE;
       }
